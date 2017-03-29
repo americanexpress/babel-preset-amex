@@ -1,0 +1,25 @@
+{
+  "name": "babel-preset-one-amex",
+  "version": "1.0.0",
+  "description": "Standard babel preset for American Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh:****.com/one/babel-preset-one-amex.git"
+  },
+  "keywords": [
+    "babel",
+    "preset"
+  ],
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0"
+  }
+}
