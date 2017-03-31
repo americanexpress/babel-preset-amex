@@ -4,11 +4,16 @@
   "description": "Standard babel preset for American Express",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ./ --ignore-path .gitignore --ext .js",
+    "pretest": "npm run lint",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/americanexpress/babel-preset-amex.git"
+  },
+  "jest": {
+    "preset": "one-amex-jest-preset"
   },
   "keywords": [
     "babel",
@@ -21,5 +26,11 @@
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-one-amex": "^3.0.0",
+    "jest": "^19.0.2",
+    "one-amex-jest-preset": "^2.1.0"
   }
 }
