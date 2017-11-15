@@ -12,14 +12,19 @@
  * the License.
  */
 
-const es2015Preset = require('babel-preset-es2015');
+const envPreset = require('babel-preset-env');
 const reactPreset = require('babel-preset-react');
 const stage0Preset = require('babel-preset-stage-0');
 const addModuleExports = require('babel-plugin-add-module-exports');
 
 module.exports = {
   presets: [
-    es2015Preset,
+    [envPreset, {
+      targets: {
+        browsers: ['last 2 versions', 'IE 10'],
+        node: '4.4.7',
+      },
+    }],
     reactPreset,
     stage0Preset,
   ],
