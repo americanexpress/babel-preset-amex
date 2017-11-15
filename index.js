@@ -16,6 +16,7 @@ const envPreset = require('babel-preset-env');
 const reactPreset = require('babel-preset-react');
 const stage0Preset = require('babel-preset-stage-0');
 const addModuleExports = require('babel-plugin-add-module-exports');
+const lodash = require('babel-plugin-lodash');
 
 module.exports = {
   presets: [
@@ -30,5 +31,6 @@ module.exports = {
   ],
   plugins: [
     addModuleExports,
+    [lodash, { id: ['lodash', 'recompose'] }],
   ],
 };
