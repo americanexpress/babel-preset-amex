@@ -24,13 +24,14 @@
   "dependencies": {
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-env": "^1.6.1",
+    "babel-plugin-lodash": "^3.3.2",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0"
   },
   "devDependencies": {
-    "amex-jest-preset": "^3.0.0",
-    "eslint": "^3.18.0",
-    "eslint-config-amex": "^4.0.0",
-    "jest": "^19.0.2"
+    "amex-jest-preset": "^4.3.0",
+    "eslint": "^4.11.0",
+    "eslint-config-amex": "^6.0.0",
+    "jest": "^21.2.1"
   }
 }
