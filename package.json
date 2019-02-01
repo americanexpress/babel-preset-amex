@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-amex",
-  "version": "1.1.0",
+  "version": "2.0.0-6",
   "description": "Standard babel preset for American Express",
   "main": "index.js",
   "scripts": {
@@ -22,16 +22,15 @@
   "author": "Jimmy King <jimmy.king@aexp.com> (https://github.com/10xLaCroixDrinker)",
   "license": "Apache-2.0",
   "dependencies": {
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "^1.6.1",
-    "babel-plugin-lodash": "^3.3.2",
-    "babel-preset-react": "^6.23.0",
-    "babel-preset-stage-0": "^6.22.0"
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-lodash": "^3.3.4"
   },
   "devDependencies": {
-    "amex-jest-preset": "^4.3.0",
-    "eslint": "^4.11.0",
-    "eslint-config-amex": "^6.0.0",
-    "jest": "^21.2.1"
+    "amex-jest-preset": "^5.0.0",
+    "eslint": "^5.14.0",
+    "eslint-config-amex": "^10.0.0",
+    "jest": "^24.1.0"
   }
 }

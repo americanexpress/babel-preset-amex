@@ -12,25 +12,21 @@
  * the License.
  */
 
-const envPreset = require('babel-preset-env');
-const reactPreset = require('babel-preset-react');
-const stage0Preset = require('babel-preset-stage-0');
-const addModuleExports = require('babel-plugin-add-module-exports');
+const envPreset = require('@babel/preset-env');
+const reactPreset = require('@babel/preset-react');
 const lodash = require('babel-plugin-lodash');
 
-module.exports = {
+module.exports = () => ({
   presets: [
     [envPreset, {
       targets: {
-        browsers: ['last 2 versions', 'IE 10'],
-        node: '4.4.7',
+        browsers: ['last 2 versions', 'not dead'],
+        node: '10.13.0',
       },
     }],
     reactPreset,
-    stage0Preset,
   ],
   plugins: [
-    addModuleExports,
     [lodash, { id: ['lodash', 'recompose'] }],
   ],
-};
+});

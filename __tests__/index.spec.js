@@ -15,18 +15,21 @@
 const preset = require('..');
 
 describe('babel-preset-amex', () => {
-  it('exports an object', () => {
-    expect(preset).toEqual(expect.any(Object));
+  it('exports a function', () => {
+    expect(preset).toEqual(expect.any(Function));
+    expect(preset()).toEqual(expect.any(Object));
   });
 
   it('includes an array of presets', () => {
-    expect(preset.presets).toEqual(expect.any(Array));
-    preset.presets.forEach(p => expect(p).toEqual(expect.any(Object)));
+    expect(preset().presets).toEqual(expect.any(Array));
+    expect(preset().presets.length).toBe(2);
+    preset().presets.forEach(p => expect(p).toEqual(expect.any(Object)));
   });
 
   it('includes an array of plugins', () => {
-    expect(preset.plugins).toEqual(expect.any(Array));
-    preset.plugins.forEach((plugin) => {
+    expect(preset().plugins).toEqual(expect.any(Array));
+    expect(preset().plugins.length).toBe(1);
+    preset().plugins.forEach((plugin) => {
       // It should be either a function
       try {
         expect(plugin).toEqual(expect.any(Function));
