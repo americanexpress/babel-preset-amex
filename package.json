@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-amex",
-  "version": "2.0.0-6",
+  "version": "2.0.0",
   "description": "Standard babel preset for American Express",
   "main": "index.js",
   "scripts": {
