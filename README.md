@@ -2,6 +2,9 @@
 
 > Standard babel preset for American Express
 
+> Want to get paid for your contributions to `babel-preset-amex`?
+> Send your resume to oneamex.careers@aexp.com
+
 ## Contributing
 We welcome Your interest in the American Express Open Source Community on Github.
 Any Contributor to any Open Source Project managed by the American Express Open
