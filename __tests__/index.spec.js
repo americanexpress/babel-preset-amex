@@ -28,7 +28,7 @@ describe('babel-preset-amex', () => {
 
   it('includes an array of plugins', () => {
     expect(preset().plugins).toEqual(expect.any(Array));
-    expect(preset().plugins.length).toBe(2);
+    expect(preset().plugins.length).toBe(3);
     preset().plugins.forEach((plugin) => {
       // It should be either a function
       try {
