@@ -2,3 +2,11 @@ language: node_js
 node_js:
   - "10"
   - "12"
+deploy:
+  on:
+    tags: true
+    branch: master
+  provider: npm
+  email: open-source-ops@aexp.com
+  api_key:
+    secure: Gj4CR5xsPxfJeZ45I0bQ9AvyS+HrLBAbGTQPays8Oeed97wL13+Szwb90w+AnjVs1e2u7kbDBaofTgJOlCjOGED2Hn7aoKLiM0e6capOREPaf4Jf0J+7Jb6H1xl7KJPa4UU9a72X/j5lpwgPmfc1YrDzmvxbQRf5+/PjQaZrzex2fjyA23kblvaj6il/kLTg5W9C0Qgr+HMrPQEDtHVJElJZlfCv9VTGOeYQtJ48Eosknv3lRJo/cXtaTz8Rp014BIWSE5CUS7KUKkmfCy8zis6gu6lMGk9JWhgLd00o1orsOnDjcv2km2/mvTAWqGcn2DSbza8Qi5bw8reyRJV8pDeTEw+46vAWa+u5clB72Iu8s5RH2jpiHuJgaTfrN6kDSjmVGabXEJxPoMuVUyTJoXIC/8V/rinE2Kr0WLNVCv2QhlsqLIniGR8ueZbcHVMNW/OhDPYO4YTdZXIXkPaEkVxlyPgNB6eZG3HBjsYOBgpR3+kVOcLtn5XfUVSDs4r/B+y20W8H4f0kgkmL9mkvQw7aQbQdvqxkMXS4yZOHnEDPDNnatKbDf9pbMaLLYQnWcZxNUKpDTxbokjBajThAg4fLX9fMKhv7cq/LFjKrGhKaiBmNgGqPnoH4Zuq3rBDqUK02wrXN5RFT69waDCzcafV8SSJTa9YYr6bcXW2vz6c=
