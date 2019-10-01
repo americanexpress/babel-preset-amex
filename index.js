@@ -14,7 +14,6 @@
 
 const envPreset = require('@babel/preset-env');
 const reactPreset = require('@babel/preset-react');
-const lodash = require('babel-plugin-lodash');
 const syntaxDynamicImport = require('@babel/plugin-syntax-dynamic-import').default;
 const proposalClassProperties = require('@babel/plugin-proposal-class-properties').default;
 
@@ -30,7 +29,6 @@ module.exports = () => ({
     reactPreset,
   ],
   plugins: [
-    [lodash, { id: ['lodash', 'recompose'] }],
     syntaxDynamicImport,
     proposalClassProperties,
   ],
