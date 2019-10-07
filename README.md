@@ -5,6 +5,8 @@
 > Want to get paid for your contributions to `babel-preset-amex`?
 > Send your resume to oneamex.careers@aexp.com
 
+To transpile for modern browsers only, set [`BABEL_ENV`](https://babeljs.io/docs/en/6.26.3/babelrc#env-option) to `modern`.
+
 ## Contributing
 We welcome Your interest in the American Express Open Source Community on Github.
 Any Contributor to any Open Source Project managed by the American Express Open

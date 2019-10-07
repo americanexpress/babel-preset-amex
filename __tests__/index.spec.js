@@ -20,6 +20,10 @@ describe('babel-preset-amex', () => {
     expect(preset()).toEqual(expect.any(Object));
   });
 
+  it('includes setting for modern browsers', () => {
+    expect(preset().env.modern).toEqual(expect.any(Object));
+  });
+
   it('includes an array of presets', () => {
     expect(preset().presets).toEqual(expect.any(Array));
     expect(preset().presets.length).toBe(2);

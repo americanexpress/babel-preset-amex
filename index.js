@@ -17,8 +17,26 @@ const reactPreset = require('@babel/preset-react');
 const syntaxDynamicImport = require('@babel/plugin-syntax-dynamic-import').default;
 const proposalClassProperties = require('@babel/plugin-proposal-class-properties').default;
 
-
 module.exports = () => ({
+  env: {
+    modern: {
+      presets: [
+        [envPreset, {
+          targets: {
+            browsers: [
+              'Chrome',
+              'ChromeAndroid',
+              'Edge',
+              'Firefox',
+              'iOS',
+              'Safari',
+            ].map(browser => `last 2 ${browser} versions`),
+            node: '10.13.0',
+          },
+        }],
+      ],
+    },
+  },
   presets: [
     [envPreset, {
       targets: {
