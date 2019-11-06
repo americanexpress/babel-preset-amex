@@ -16,6 +16,7 @@ const envPreset = require('@babel/preset-env');
 const reactPreset = require('@babel/preset-react');
 const syntaxDynamicImport = require('@babel/plugin-syntax-dynamic-import').default;
 const proposalClassProperties = require('@babel/plugin-proposal-class-properties').default;
+const { browserlist, legacyBrowserList } = require('./browserlist');
 
 module.exports = () => ({
   env: {
@@ -23,14 +24,7 @@ module.exports = () => ({
       presets: [
         [envPreset, {
           targets: {
-            browsers: [
-              'Chrome',
-              'ChromeAndroid',
-              'Edge',
-              'Firefox',
-              'iOS',
-              'Safari',
-            ].map(browser => `last 2 ${browser} versions`),
+            browsers: browserlist,
             node: '10.13.0',
           },
         }],
@@ -40,7 +34,7 @@ module.exports = () => ({
   presets: [
     [envPreset, {
       targets: {
-        browsers: ['last 2 versions', 'not dead'],
+        browsers: legacyBrowserList,
         node: '10.13.0',
       },
     }],
