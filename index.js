@@ -16,6 +16,8 @@ const envPreset = require('@babel/preset-env');
 const reactPreset = require('@babel/preset-react');
 const syntaxDynamicImport = require('@babel/plugin-syntax-dynamic-import').default;
 const proposalClassProperties = require('@babel/plugin-proposal-class-properties').default;
+const exportDefaultFrom = require('@babel/plugin-proposal-export-default-from').default;
+
 const { browserlist, legacyBrowserList } = require('./browserlist');
 
 module.exports = () => ({
@@ -43,5 +45,6 @@ module.exports = () => ({
   plugins: [
     syntaxDynamicImport,
     proposalClassProperties,
+    exportDefaultFrom,
   ],
 });
