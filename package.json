@@ -6,14 +6,19 @@
   "scripts": {
     "lint": "eslint ./ --ignore-path .gitignore --ext .js",
     "pretest": "npm run lint",
-    "test": "jest"
+    "test": "jest",
+    "test:git-history": "commitlint --from origin/master --to HEAD",
+    "posttest": "npm run test:git-history"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/americanexpress/babel-preset-amex.git"
   },
   "jest": {
-    "preset": "amex-jest-preset"
+    "preset": "amex-jest-preset",
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/commitlint.config.js"
+    ]
   },
   "keywords": [
     "babel",
@@ -30,9 +35,18 @@
     "@babel/preset-react": "^7.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "amex-jest-preset": "^5.0.0",
     "eslint": "^5.14.0",
     "eslint-config-amex": "^10.0.0",
+    "husky": "^3.1.0",
     "jest": "^24.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
