@@ -1,13 +1,9 @@
-<h1>
-  <center>
-    <br />
-    <img src="./babel-preset-amex.png" alt="babel-preset-amex - Babel Preset Amex" width="50%" />
-    <br /><br />
-  </center>
+<h1 align="center">
+  <img src='https://github.com/americanexpress/babel-preset-amex/raw/master/babel-preset-amex.png' alt="Babel Preset Amex - One Amex" width='50%'/>
 </h1>
 
-[![npm version](https://badge.fury.io/js/babel-preset-amex.svg)](https://badge.fury.io/js/babel-preset-amex)
-[![Build Status](https://travis-ci.org/americanexpress/babel-preset-amex.svg?branch=master)](https://travis-ci.org/americanexpress/babel-preset-amex)
+[![npm](https://img.shields.io/npm/v/babel-preset-amex)](https://www.npmjs.com/package/babel-preset-amex)
+[![Travis (.org) branch](https://img.shields.io/travis/americanexpress/babel-preset-amex/master)](https://travis-ci.org/americanexpress/babel-preset-amex)
 
 > Standard babel preset for American Express
 
