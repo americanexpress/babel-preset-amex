@@ -1,4 +1,4 @@
-# Contributing to eslint-config-amex
+# Contributing to babel-preset-amex
 
 ✨ Thank you for taking the time to contribute to this project ✨
 
@@ -19,12 +19,12 @@ This project adheres to the American Express [Code of Conduct](./CODE_OF_CONDUCT
 
 ### Installation
 
-1. Fork the repository `eslint-config-amex` to your GitHub account.
+1. Fork the repository `babel-preset-amex` to your GitHub account.
 2. Afterwards run the following commands in your terminal
 
     ```bash
-    $ git clone https://github.com/<your-github-username>/eslint-config-amex
-    $ cd eslint-config-amex
+    $ git clone https://github.com/<your-github-username>/babel-preset-amex
+    $ cd babel-preset-amex
     ```
 
    > replace `your-github-username` with your github username
@@ -39,24 +39,24 @@ This project adheres to the American Express [Code of Conduct](./CODE_OF_CONDUCT
 
 #### Running tests
 
-**`npm run lint`**
+- `npm run lint`
 
 Verifies that your code matches the American Express code style defined in
-[`eslint-config-amex`](https://github.com/americanexpress/eslint-config-amex).
+[`babel-preset-amex`](https://github.com/americanexpress/babel-preset-amex).
 
-**`npm pretest`**
+- `npm pretest`
 
 Runs `npm run lint`.
 
-**`npm test`**
+- `npm test`
 
 Runs unit tests.
 
-**`npm run test:git-history`**
+- `npm run test:git-history`
 
 Verifies the format of all commit messages on the current branch.
 
-**`npm posttest`**
+- `npm posttest`
 
 Verifies the format of all commit messages on the current branch.
 
