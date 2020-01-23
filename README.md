@@ -15,7 +15,6 @@ Want to get paid for your contributions to `babel-preset-amex`?
 ## 📖 Table of Contents
 
 * [Usage](#-usage)
-* [Available Scripts](#-available-scripts)
 * [Contributing](#-contributing)
 * [License](#-license)
 * [Code of Conduct](#-code-of-conduct)
@@ -36,29 +35,6 @@ npm install --save-dev babel-preset-amex
 }
 ```
 
-## 📜 Available Scripts
-
-**`npm run lint`**
-
-Verifies that your code matches the American Express code style defined in
-[`eslint-config-amex`](https://github.com/americanexpress/eslint-config-amex).
-
-**`npm pretest`**
-
-Runs `npm run lint`.
-
-**`npm test`**
-
-Runs unit tests.
-
-**`npm run test:git-history`**
-
-Verifies the format of all commit messages on the current branch.
-
-**`npm posttest`**
-
-Verifies the format of all commit messages on the current branch.
-
 ## 🏆 Contributing
 
 We welcome Your interest in the American Express Open Source Community on Github.
@@ -69,7 +45,7 @@ and to recipients of software distributed by American Express, You reserve all
 right, title, and interest, if any, in and to Your Contributions. Please [fill
 out the Agreement](https://cla-assistant.io/americanexpress/babel-preset-amex).
 
-Please feel free to open pull requests and see [CONTRIBUTING.md](./CONTRIBUTING.md) for commit formatting details.
+Please feel free to open pull requests and see [CONTRIBUTING.md](./CONTRIBUTING.md) to learn how to get started contributing.
 
 ## 🗝️ License
 
