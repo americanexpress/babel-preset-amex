@@ -8,7 +8,8 @@
     "pretest": "npm run lint",
     "test": "jest",
     "test:git-history": "commitlint --from origin/master --to HEAD",
-    "posttest": "npm run test:git-history"
+    "test:lockfile": "lockfile-lint -p package-lock.json -t npm -a npm -o https: -c -i",
+    "posttest": "npm run test:git-history && npm run test:lockfile"
   },
   "repository": {
     "type": "git",
@@ -43,7 +44,8 @@
     "eslint": "^5.14.0",
     "eslint-config-amex": "^10.0.0",
     "husky": "^3.1.0",
-    "jest": "^24.1.0"
+    "jest": "^24.1.0",
+    "lockfile-lint": "^3.0.8"
   },
   "husky": {
     "hooks": {
