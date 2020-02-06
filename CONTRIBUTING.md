@@ -20,43 +20,42 @@ This project adheres to the American Express [Code of Conduct](./CODE_OF_CONDUCT
 ### Installation
 
 1. Fork the repository `babel-preset-amex` to your GitHub account.
-2. Afterwards run the following commands in your terminal
+2. Afterwards run the following commands in your terminal to clone the repository. Review this tutorial to learn how to get started cloning the repository [https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
     ```bash
     $ git clone https://github.com/<your-github-username>/babel-preset-amex
     $ cd babel-preset-amex
     ```
-
    > replace `your-github-username` with your github username
 
 3. Install the dependencies by running
 
     ```bash
-    $ cd npm install
+    $ npm install
     ```
 
 4. You can now run any of these scripts from the root folder.
 
 #### Running tests
 
-- `npm run lint`
+- **`npm run lint`**
 
 Verifies that your code matches the American Express code style defined in
 [`babel-preset-amex`](https://github.com/americanexpress/babel-preset-amex).
 
-- `npm pretest`
+- **`npm pretest`**
 
 Runs `npm run lint`.
 
-- `npm test`
+- **`npm test`**
 
 Runs unit tests.
 
-- `npm run test:git-history`
+- **`npm run test:git-history`**
 
 Verifies the format of all commit messages on the current branch.
 
-- `npm posttest`
+- **`npm posttest`**
 
 Verifies the format of all commit messages on the current branch.
 
