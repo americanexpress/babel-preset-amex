@@ -18,6 +18,7 @@ const syntaxDynamicImport = require('@babel/plugin-syntax-dynamic-import').defau
 const proposalClassProperties = require('@babel/plugin-proposal-class-properties').default;
 const exportDefaultFrom = require('@babel/plugin-proposal-export-default-from').default;
 const proposalOptionalChaining = require('@babel/plugin-proposal-optional-chaining').default;
+const removePropTypes = require('babel-plugin-transform-react-remove-prop-types').default;
 
 const { browserlist, legacyBrowserList } = require('./browserlist');
 
@@ -48,5 +49,6 @@ module.exports = () => ({
     proposalClassProperties,
     exportDefaultFrom,
     proposalOptionalChaining,
+    removePropTypes,
   ],
 });
