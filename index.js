@@ -29,7 +29,7 @@ module.exports = () => ({
         [envPreset, {
           targets: {
             browsers: browserlist,
-            node: '10.13.0',
+            node: '12.16.1',
           },
         }],
       ],
@@ -39,7 +39,7 @@ module.exports = () => ({
     [envPreset, {
       targets: {
         browsers: legacyBrowserList,
-        node: '10.13.0',
+        node: '12.16.1',
       },
     }],
     reactPreset,
