@@ -20,35 +20,50 @@ const exportDefaultFrom = require('@babel/plugin-proposal-export-default-from').
 const proposalOptionalChaining = require('@babel/plugin-proposal-optional-chaining').default;
 const removePropTypes = require('babel-plugin-transform-react-remove-prop-types').default;
 
-const { browserlist, legacyBrowserList } = require('./browserlist');
+const { browserList, legacyBrowserList } = require('./browserlist');
 
-module.exports = () => ({
-  env: {
-    modern: {
-      presets: [
-        [envPreset, {
-          targets: {
-            browsers: browserlist,
-            node: '12.16.1',
-          },
-        }],
-      ],
+module.exports = (api = {}, opts = {}) => {
+  const serverOnly = opts.serverOnly || (api.env && api.env('server'));
+  const isModern = opts.modern || (api.env && api.env('modern'));
+
+  const targets = {
+    node: '12.16.1',
+  };
+
+  if (!serverOnly) {
+    targets.browsers = isModern ? browserList : legacyBrowserList;
+  }
+
+  const exclude = serverOnly ? ['@babel/plugin-transform-regenerator'] : [];
+
+  const presetEnvOptions = Object.assign(
+    {},
+    {
+      targets,
+      exclude,
     },
-  },
-  presets: [
-    [envPreset, {
-      targets: {
-        browsers: legacyBrowserList,
-        node: '12.16.1',
-      },
-    }],
-    reactPreset,
-  ],
-  plugins: [
-    syntaxDynamicImport,
-    proposalClassProperties,
-    exportDefaultFrom,
-    proposalOptionalChaining,
-    removePropTypes,
-  ],
-});
+    opts['preset-env']
+  );
+
+  const reactPresetOptions = Object.assign({}, opts['react-preset']);
+
+  return {
+    presets: [
+      [
+        envPreset,
+        presetEnvOptions,
+      ],
+      [
+        reactPreset,
+        reactPresetOptions,
+      ],
+    ],
+    plugins: [
+      syntaxDynamicImport,
+      proposalClassProperties,
+      exportDefaultFrom,
+      proposalOptionalChaining,
+      removePropTypes,
+    ],
+  };
+};

@@ -20,10 +20,6 @@ describe('babel-preset-amex', () => {
     expect(preset()).toEqual(expect.any(Object));
   });
 
-  it('includes setting for modern browsers', () => {
-    expect(preset().env.modern).toEqual(expect.any(Object));
-  });
-
   it('includes an array of presets', () => {
     expect(preset().presets).toEqual(expect.any(Array));
     expect(preset().presets.length).toBe(2);
@@ -46,5 +42,21 @@ describe('babel-preset-amex', () => {
       expect(plugin[0]).toEqual(expect.any(Function));
       expect(plugin[1]).toEqual(expect.any(Object));
     });
+  });
+
+  it('returns modern preset for env and option', () => {
+    const presetModernOpt = preset({}, { modern: true });
+    const presetModernEnv = preset({ env: envName => envName === 'modern' });
+    expect(presetModernOpt).toMatchSnapshot();
+    expect(presetModernEnv).toMatchSnapshot();
+    expect(presetModernOpt).toEqual(presetModernEnv);
+  });
+
+  it('returns server only config when given serverOnly option', () => {
+    const presetServerOnlyOpt = preset({}, { serverOnly: true });
+    const presetServerEnv = preset({ env: envName => envName === 'server' });
+    expect(presetServerOnlyOpt).toMatchSnapshot();
+    expect(presetServerEnv).toMatchSnapshot();
+    expect(presetServerOnlyOpt).toEqual(presetServerEnv);
   });
 });
