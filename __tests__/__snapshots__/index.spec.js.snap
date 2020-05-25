@@ -1,5 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`babel-preset-amex allows options to be passed to plugins 1`] = `
+Object {
+  "plugins": Array [
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "default": [Function],
+        "getModulesPluginNames": [Function],
+        "getPolyfillPlugins": [Function],
+        "isPluginRequired": [Function],
+        "transformIncludesAndExcludes": [Function],
+      },
+      Object {
+        "exclude": Array [
+          "@babel/plugin-transform-regenerator",
+        ],
+        "targets": Object {
+          "browsers": Array [
+            "last 2 versions",
+            "not dead",
+          ],
+          "node": "12.16.1",
+        },
+      },
+    ],
+    Array [
+      Object {
+        "default": [Function],
+      },
+      Object {},
+    ],
+  ],
+}
+`;
+
 exports[`babel-preset-amex returns modern preset for env and option 1`] = `
 Object {
   "plugins": Array [
@@ -19,7 +60,6 @@ Object {
         "transformIncludesAndExcludes": [Function],
       },
       Object {
-        "exclude": Array [],
         "targets": Object {
           "browsers": Array [
             "last 2 Chrome versions",
@@ -62,7 +102,6 @@ Object {
         "transformIncludesAndExcludes": [Function],
       },
       Object {
-        "exclude": Array [],
         "targets": Object {
           "browsers": Array [
             "last 2 Chrome versions",
@@ -105,9 +144,6 @@ Object {
         "transformIncludesAndExcludes": [Function],
       },
       Object {
-        "exclude": Array [
-          "@babel/plugin-transform-regenerator",
-        ],
         "targets": Object {
           "node": "12.16.1",
         },
@@ -142,9 +178,6 @@ Object {
         "transformIncludesAndExcludes": [Function],
       },
       Object {
-        "exclude": Array [
-          "@babel/plugin-transform-regenerator",
-        ],
         "targets": Object {
           "node": "12.16.1",
         },

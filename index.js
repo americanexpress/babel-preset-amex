@@ -34,14 +34,9 @@ module.exports = (api = {}, opts = {}) => {
     targets.browsers = isModern ? browserList : legacyBrowserList;
   }
 
-  const exclude = serverOnly ? ['@babel/plugin-transform-regenerator'] : [];
-
   const presetEnvOptions = Object.assign(
     {},
-    {
-      targets,
-      exclude,
-    },
+    { targets },
     opts['preset-env']
   );
 

@@ -59,4 +59,8 @@ describe('babel-preset-amex', () => {
     expect(presetServerEnv).toMatchSnapshot();
     expect(presetServerOnlyOpt).toEqual(presetServerEnv);
   });
+
+  it('allows options to be passed to plugins', () => {
+    expect(preset({}, { 'preset-env': { exclude: ['@babel/plugin-transform-regenerator'] } })).toMatchSnapshot();
+  });
 });
