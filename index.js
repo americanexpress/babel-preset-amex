@@ -27,7 +27,7 @@ module.exports = (api = {}, opts = {}) => {
   const isModern = opts.modern || (api.env && api.env('modern'));
 
   const targets = {
-    node: '12.16.1',
+    node: 'current',
   };
 
   if (!serverOnly) {

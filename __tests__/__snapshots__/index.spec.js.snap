@@ -27,7 +27,7 @@ Object {
             "last 2 versions",
             "not dead",
           ],
-          "node": "12.16.1",
+          "node": "current",
         },
       },
     ],
@@ -69,7 +69,7 @@ Object {
             "last 2 iOS versions",
             "last 2 Safari versions",
           ],
-          "node": "12.16.1",
+          "node": "current",
         },
       },
     ],
@@ -111,7 +111,7 @@ Object {
             "last 2 iOS versions",
             "last 2 Safari versions",
           ],
-          "node": "12.16.1",
+          "node": "current",
         },
       },
     ],
@@ -145,7 +145,7 @@ Object {
       },
       Object {
         "targets": Object {
-          "node": "12.16.1",
+          "node": "current",
         },
       },
     ],
@@ -179,7 +179,7 @@ Object {
       },
       Object {
         "targets": Object {
-          "node": "12.16.1",
+          "node": "current",
         },
       },
     ],
