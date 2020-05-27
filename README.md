@@ -35,6 +35,59 @@ npm install --save-dev babel-preset-amex
 }
 ```
 
+#### Options
+
+By default `babel-preset-amex` will transpile for the "last 2 versions" and "not dead" browsers.
+
+```json
+{
+  "presets": [[
+    "amex",
+    {
+      "serverOnly": true,
+      "modern": true,
+    }
+  ]]
+}
+```
+
+`serverOnly` - Will transpile only for node.
+`modern` - Will transpile for [common browsers](./browserlist.js) n-1.
+
+#### Customizing Babel Config
+
+Babel Preset Amex includes the following:
+
+Presets
+- [preset-env](https://babeljs.io/docs/en/babel-preset-env)
+- [preset-react](https://babeljs.io/docs/en/babel-preset-react)
+
+Plugins
+- [plugin-syntax-dynamic-import](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import)
+- [plugin-proposal-class-properties](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties)
+- [plugin-proposal-export-default-from](https://babeljs.io/docs/en/babel-plugin-proposal-export-default-from)
+- [plugin-proposal-optional-chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining)
+- [babel-plugin-transform-react-remove-prop-types](https://www.npmjs.com/package/babel-plugin-transform-react-remove-prop-types)
+
+If you wish to re-configure any of those presets do not redefine them
+within you `.babelrc`. Instead you can configure them through the
+`amex` preset.
+
+```json
+{
+  "presets": [
+    [
+      "amex",
+      {
+        "preset-env": {},
+        "preset-react": {}
+      }
+    ]
+  ]
+};
+```
+
+
 ## 🏆 Contributing
 
 We welcome Your interest in the American Express Open Source Community on Github.

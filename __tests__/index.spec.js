@@ -14,14 +14,18 @@
 
 const preset = require('..');
 
+jest.mock('@babel/preset-env', () => ({ default: '@babel/preset-env' }));
+jest.mock('@babel/preset-react', () => ({ default: '@babel/preset-react' }));
+jest.mock('@babel/plugin-syntax-dynamic-import', () => ({ default: '@babel/plugin-syntax-dynamic-import' }));
+jest.mock('@babel/plugin-proposal-class-properties', () => ({ default: '@babel/plugin-proposal-class-properties' }));
+jest.mock('@babel/plugin-proposal-export-default-from', () => ({ default: '@babel/plugin-proposal-export-default-from' }));
+jest.mock('@babel/plugin-proposal-optional-chaining', () => ({ default: '@babel/plugin-proposal-optional-chaining' }));
+jest.mock('babel-plugin-transform-react-remove-prop-types', () => ({ default: 'babel-plugin-transform-react-remove-prop-types' }));
+
 describe('babel-preset-amex', () => {
   it('exports a function', () => {
     expect(preset).toEqual(expect.any(Function));
     expect(preset()).toEqual(expect.any(Object));
-  });
-
-  it('includes setting for modern browsers', () => {
-    expect(preset().env.modern).toEqual(expect.any(Object));
   });
 
   it('includes an array of presets', () => {
@@ -33,18 +37,25 @@ describe('babel-preset-amex', () => {
   it('includes an array of plugins', () => {
     expect(preset().plugins).toEqual(expect.any(Array));
     expect(preset().plugins.length).toBe(5);
-    preset().plugins.forEach((plugin) => {
-      // It should be either a function
-      try {
-        expect(plugin).toEqual(expect.any(Function));
-        return;
-      } catch (e) { /* do nothing */ }
+  });
 
-      // or an array containing a function and an object
-      expect(plugin).toEqual(expect.any(Array));
-      expect(plugin.length).toBe(2);
-      expect(plugin[0]).toEqual(expect.any(Function));
-      expect(plugin[1]).toEqual(expect.any(Object));
-    });
+  it('returns modern preset for env and option', () => {
+    const presetModernOpt = preset({}, { modern: true });
+    const presetModernEnv = preset({ env: envName => envName === 'modern' });
+    expect(presetModernOpt).toMatchSnapshot();
+    expect(presetModernEnv).toMatchSnapshot();
+    expect(presetModernOpt).toEqual(presetModernEnv);
+  });
+
+  it('returns server only config when given serverOnly option', () => {
+    const presetServerOnlyOpt = preset({}, { serverOnly: true });
+    const presetServerEnv = preset({ env: envName => envName === 'server' });
+    expect(presetServerOnlyOpt).toMatchSnapshot();
+    expect(presetServerEnv).toMatchSnapshot();
+    expect(presetServerOnlyOpt).toEqual(presetServerEnv);
+  });
+
+  it('allows options to be passed to plugins', () => {
+    expect(preset({}, { 'preset-env': { exclude: ['@babel/plugin-transform-regenerator'] } })).toMatchSnapshot();
   });
 });

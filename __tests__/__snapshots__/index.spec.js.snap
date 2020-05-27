@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`babel-preset-amex allows options to be passed to plugins 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-optional-chaining",
+    "babel-plugin-transform-react-remove-prop-types",
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "default": "@babel/preset-env",
+      },
+      Object {
+        "exclude": Array [
+          "@babel/plugin-transform-regenerator",
+        ],
+        "targets": Object {
+          "browsers": Array [
+            "last 2 versions",
+            "not dead",
+          ],
+          "node": "current",
+        },
+      },
+    ],
+    Array [
+      Object {
+        "default": "@babel/preset-react",
+      },
+      Object {},
+    ],
+  ],
+}
+`;
+
+exports[`babel-preset-amex returns modern preset for env and option 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-optional-chaining",
+    "babel-plugin-transform-react-remove-prop-types",
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "default": "@babel/preset-env",
+      },
+      Object {
+        "targets": Object {
+          "browsers": Array [
+            "last 2 Chrome versions",
+            "last 2 ChromeAndroid versions",
+            "last 2 Edge versions",
+            "last 2 Firefox versions",
+            "last 2 iOS versions",
+            "last 2 Safari versions",
+          ],
+          "node": "current",
+        },
+      },
+    ],
+    Array [
+      Object {
+        "default": "@babel/preset-react",
+      },
+      Object {},
+    ],
+  ],
+}
+`;
+
+exports[`babel-preset-amex returns modern preset for env and option 2`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-optional-chaining",
+    "babel-plugin-transform-react-remove-prop-types",
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "default": "@babel/preset-env",
+      },
+      Object {
+        "targets": Object {
+          "browsers": Array [
+            "last 2 Chrome versions",
+            "last 2 ChromeAndroid versions",
+            "last 2 Edge versions",
+            "last 2 Firefox versions",
+            "last 2 iOS versions",
+            "last 2 Safari versions",
+          ],
+          "node": "current",
+        },
+      },
+    ],
+    Array [
+      Object {
+        "default": "@babel/preset-react",
+      },
+      Object {},
+    ],
+  ],
+}
+`;
+
+exports[`babel-preset-amex returns server only config when given serverOnly option 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-optional-chaining",
+    "babel-plugin-transform-react-remove-prop-types",
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "default": "@babel/preset-env",
+      },
+      Object {
+        "targets": Object {
+          "node": "current",
+        },
+      },
+    ],
+    Array [
+      Object {
+        "default": "@babel/preset-react",
+      },
+      Object {},
+    ],
+  ],
+}
+`;
+
+exports[`babel-preset-amex returns server only config when given serverOnly option 2`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-optional-chaining",
+    "babel-plugin-transform-react-remove-prop-types",
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "default": "@babel/preset-env",
+      },
+      Object {
+        "targets": Object {
+          "node": "current",
+        },
+      },
+    ],
+    Array [
+      Object {
+        "default": "@babel/preset-react",
+      },
+      Object {},
+    ],
+  ],
+}
+`;
