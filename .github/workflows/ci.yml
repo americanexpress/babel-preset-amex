@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ '10', '12' ]
+        node: [ '10', '12', '14' ]
     steps:
       - name: Setup master branch for commitlint
         uses: actions/checkout@v2
