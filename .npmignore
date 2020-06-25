@@ -1,6 +1,7 @@
 test-results
 __tests__
 CODEOWNERS
+.travis.yml
 .eslintrc.json
 *.tgz
 .jest-cache
