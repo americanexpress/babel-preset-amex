@@ -3,7 +3,7 @@
 </h1>
 
 [![npm](https://img.shields.io/npm/v/babel-preset-amex)](https://www.npmjs.com/package/babel-preset-amex)
-[![Travis (.org) branch](https://img.shields.io/travis/americanexpress/babel-preset-amex/master)](https://travis-ci.org/americanexpress/babel-preset-amex)
+![CI](https://github.com/americanexpress/babel-preset-amex/workflows/CI/badge.svg)
 
 > Standard babel preset for American Express
 
