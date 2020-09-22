@@ -1,9 +1,9 @@
 <h1 align="center">
-  <img src='https://github.com/americanexpress/babel-preset-amex/raw/master/babel-preset-amex.png' alt="Babel Preset Amex - One Amex" width='50%'/>
+  <img src='https://github.com/americanexpress/babel-preset-amex/raw/main/babel-preset-amex.png' alt="Babel Preset Amex - One Amex" width='50%'/>
 </h1>
 
 [![npm](https://img.shields.io/npm/v/babel-preset-amex)](https://www.npmjs.com/package/babel-preset-amex)
-![CI](https://github.com/americanexpress/babel-preset-amex/workflows/CI/badge.svg)
+![Health Check](https://github.com/americanexpress/babel-preset-amex/workflows/Health%20Check/badge.svg)
 
 > Standard babel preset for American Express
 
