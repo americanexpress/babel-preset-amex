@@ -25,6 +25,16 @@ const { browserList, legacyBrowserList } = require('./browserlist');
 module.exports = (api = {}, opts = {}) => {
   const serverOnly = opts.serverOnly || (api.env && api.env('server'));
   const isModern = opts.modern || (api.env && api.env('modern'));
+  const isProduction = process.env.NODE_ENV === 'production';
+  const plugins = [
+    syntaxDynamicImport,
+    proposalClassProperties,
+    exportDefaultFrom,
+    proposalOptionalChaining,
+  ];
+  if (isProduction) {
+    plugins.push(removePropTypes);
+  }
 
   const targets = {
     node: 'current',
@@ -53,12 +63,6 @@ module.exports = (api = {}, opts = {}) => {
         reactPresetOptions,
       ],
     ],
-    plugins: [
-      syntaxDynamicImport,
-      proposalClassProperties,
-      exportDefaultFrom,
-      proposalOptionalChaining,
-      removePropTypes,
-    ],
+    plugins,
   };
 };
