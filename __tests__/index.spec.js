@@ -36,7 +36,7 @@ describe('babel-preset-amex', () => {
 
   it('includes an array of plugins', () => {
     expect(preset().plugins).toEqual(expect.any(Array));
-    expect(preset().plugins.length).toBe(4);
+    expect(preset().plugins.length).toBe(5);
   });
 
   it('returns modern preset for env and option', () => {
@@ -59,12 +59,12 @@ describe('babel-preset-amex', () => {
     expect(preset({}, { 'preset-env': { exclude: ['@babel/plugin-transform-regenerator'] } })).toMatchSnapshot();
   });
 
-  it('in production mode, includes an array of plugins', () => {
+  it('in development mode, includes an array of plugins', () => {
     const originalEnv = process.env;
-    process.env = { NODE_ENV: 'production' };
+    process.env = { NODE_ENV: 'development' };
 
     expect(preset().plugins).toEqual(expect.any(Array));
-    expect(preset().plugins.length).toEqual(5);
+    expect(preset().plugins.length).toEqual(4);
 
     process.env = originalEnv;
   });
