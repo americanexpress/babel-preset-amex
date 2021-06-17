@@ -8,7 +8,7 @@
     "test:lint": "eslint ./ --ignore-path .gitignore --ext .js",
     "test:lockfile": "lockfile-lint -p package-lock.json -t npm -a npm -o https: -c -i",
     "test:git-history": "commitlint --from origin/main --to HEAD",
-    "test:unit": "jest",
+    "test:unit": "NODE_ENV=production jest",
     "posttest": "npm run test:git-history && npm run test:lockfile"
   },
   "repository": {
