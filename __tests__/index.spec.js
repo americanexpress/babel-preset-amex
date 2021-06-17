@@ -58,4 +58,14 @@ describe('babel-preset-amex', () => {
   it('allows options to be passed to plugins', () => {
     expect(preset({}, { 'preset-env': { exclude: ['@babel/plugin-transform-regenerator'] } })).toMatchSnapshot();
   });
+
+  it('in development mode, includes an array of plugins', () => {
+    const originalEnv = process.env;
+    process.env = { NODE_ENV: 'development' };
+
+    expect(preset().plugins).toEqual(expect.any(Array));
+    expect(preset().plugins.length).toEqual(4);
+
+    process.env = originalEnv;
+  });
 });
