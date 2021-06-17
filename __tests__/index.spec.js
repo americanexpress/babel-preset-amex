@@ -22,6 +22,11 @@ jest.mock('@babel/plugin-proposal-export-default-from', () => ({ default: '@babe
 jest.mock('@babel/plugin-proposal-optional-chaining', () => ({ default: '@babel/plugin-proposal-optional-chaining' }));
 jest.mock('babel-plugin-transform-react-remove-prop-types', () => ({ default: 'babel-plugin-transform-react-remove-prop-types' }));
 
+const { NODE_ENV } = process.env;
+beforeEach(() => {
+  jest.clearAllMocks();
+  process.env.NODE_ENV = NODE_ENV;
+});
 describe('babel-preset-amex', () => {
   it('exports a function', () => {
     expect(preset).toEqual(expect.any(Function));
@@ -34,12 +39,14 @@ describe('babel-preset-amex', () => {
     preset().presets.forEach(p => expect(p).toEqual(expect.any(Object)));
   });
 
-  it('includes an array of plugins', () => {
+  it('includes an array of plugins in production', () => {
+    process.env.NODE_ENV = 'production';
     expect(preset().plugins).toEqual(expect.any(Array));
     expect(preset().plugins.length).toBe(5);
   });
 
   it('returns modern preset for env and option', () => {
+    process.env.NODE_ENV = 'production';
     const presetModernOpt = preset({}, { modern: true });
     const presetModernEnv = preset({ env: envName => envName === 'modern' });
     expect(presetModernOpt).toMatchSnapshot();
@@ -48,6 +55,7 @@ describe('babel-preset-amex', () => {
   });
 
   it('returns server only config when given serverOnly option', () => {
+    process.env.NODE_ENV = 'production';
     const presetServerOnlyOpt = preset({}, { serverOnly: true });
     const presetServerEnv = preset({ env: envName => envName === 'server' });
     expect(presetServerOnlyOpt).toMatchSnapshot();
@@ -56,16 +64,14 @@ describe('babel-preset-amex', () => {
   });
 
   it('allows options to be passed to plugins', () => {
+    process.env.NODE_ENV = 'production';
     expect(preset({}, { 'preset-env': { exclude: ['@babel/plugin-transform-regenerator'] } })).toMatchSnapshot();
   });
 
   it('in development mode, includes an array of plugins', () => {
-    const originalEnv = process.env;
-    process.env = { NODE_ENV: 'development' };
+    process.env.NODE_ENV = 'development';
 
     expect(preset().plugins).toEqual(expect.any(Array));
     expect(preset().plugins.length).toEqual(4);
-
-    process.env = originalEnv;
   });
 });
