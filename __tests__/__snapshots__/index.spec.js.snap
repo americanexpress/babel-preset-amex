@@ -7,6 +7,7 @@ Object {
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-proposal-optional-chaining",
+    [Function],
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [
@@ -44,6 +45,7 @@ Object {
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-proposal-optional-chaining",
+    [Function],
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [
@@ -82,6 +84,7 @@ Object {
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-proposal-optional-chaining",
+    [Function],
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [
@@ -120,6 +123,7 @@ Object {
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-proposal-optional-chaining",
+    [Function],
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [
@@ -150,6 +154,7 @@ Object {
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-proposal-optional-chaining",
+    [Function],
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [

@@ -19,6 +19,7 @@ const proposalClassProperties = require('@babel/plugin-proposal-class-properties
 const exportDefaultFrom = require('@babel/plugin-proposal-export-default-from').default;
 const proposalOptionalChaining = require('@babel/plugin-proposal-optional-chaining').default;
 const removePropTypes = require('babel-plugin-transform-react-remove-prop-types').default;
+const importGraphQL = require('babel-plugin-import-graphql').default;
 
 const { browserList, legacyBrowserList } = require('./browserlist');
 
@@ -31,6 +32,7 @@ module.exports = (api = {}, opts = {}) => {
     proposalClassProperties,
     exportDefaultFrom,
     proposalOptionalChaining,
+    importGraphQL,
   ];
   if (isProduction) {
     plugins.push(removePropTypes);

@@ -42,7 +42,7 @@ describe('babel-preset-amex', () => {
   it('includes an array of plugins in production', () => {
     process.env.NODE_ENV = 'production';
     expect(preset().plugins).toEqual(expect.any(Array));
-    expect(preset().plugins.length).toBe(5);
+    expect(preset().plugins.length).toBe(6);
   });
 
   it('returns modern preset for env and option', () => {
@@ -72,6 +72,6 @@ describe('babel-preset-amex', () => {
     process.env.NODE_ENV = 'development';
 
     expect(preset().plugins).toEqual(expect.any(Array));
-    expect(preset().plugins.length).toEqual(4);
+    expect(preset().plugins.length).toEqual(5);
   });
 });
