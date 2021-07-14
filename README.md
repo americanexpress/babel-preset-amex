@@ -68,6 +68,7 @@ Plugins
 - [plugin-proposal-export-default-from](https://babeljs.io/docs/en/babel-plugin-proposal-export-default-from)
 - [plugin-proposal-optional-chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining)
 - [babel-plugin-transform-react-remove-prop-types](https://www.npmjs.com/package/babel-plugin-transform-react-remove-prop-types)
+- [babel-plugin-import-graphql](https://www.npmjs.com/package/babel-plugin-import-graphql)
 
 If you wish to re-configure any of those presets do not redefine them
 within you `.babelrc`. Instead you can configure them through the
