@@ -1,3 +1,10 @@
+# [3.6.0](https://github.com/americanexpress/babel-preset-amex/compare/v3.5.1...v3.6.0) (2022-02-08)
+
+
+### Features
+
+* **moduleFormat:** added new option ([6c05915](https://github.com/americanexpress/babel-preset-amex/commit/6c0591512b456d61d03c5b1c598a7192c53a1dc8))
+
 ## [3.5.1](https://github.com/americanexpress/babel-preset-amex/compare/v3.5.0...v3.5.1) (2021-06-17)
 
 
