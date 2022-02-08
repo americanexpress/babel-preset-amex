@@ -37,6 +37,148 @@ Object {
 }
 `;
 
+exports[`babel-preset-amex moduleFormat allows an esm option 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-optional-chaining",
+    "babel-plugin-transform-react-remove-prop-types",
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "default": "@babel/preset-env",
+      },
+      Object {
+        "modules": false,
+        "targets": Object {
+          "browsers": Array [
+            "last 2 versions",
+            "not dead",
+          ],
+          "node": "current",
+        },
+      },
+    ],
+    Array [
+      Object {
+        "default": "@babel/preset-react",
+      },
+      Object {},
+    ],
+  ],
+}
+`;
+
+exports[`babel-preset-amex moduleFormat allows other options to be passed to preset-env while allowing esm option 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-optional-chaining",
+    "babel-plugin-transform-react-remove-prop-types",
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "default": "@babel/preset-env",
+      },
+      Object {
+        "exclude": Array [
+          "@babel/plugin-transform-regenerator",
+        ],
+        "modules": false,
+        "targets": Object {
+          "browsers": Array [
+            "last 2 versions",
+            "not dead",
+          ],
+          "node": "current",
+        },
+      },
+    ],
+    Array [
+      Object {
+        "default": "@babel/preset-react",
+      },
+      Object {},
+    ],
+  ],
+}
+`;
+
+exports[`babel-preset-amex moduleFormat does nothing when an unknown option is provided 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-optional-chaining",
+    "babel-plugin-transform-react-remove-prop-types",
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "default": "@babel/preset-env",
+      },
+      Object {
+        "targets": Object {
+          "browsers": Array [
+            "last 2 versions",
+            "not dead",
+          ],
+          "node": "current",
+        },
+      },
+    ],
+    Array [
+      Object {
+        "default": "@babel/preset-react",
+      },
+      Object {},
+    ],
+  ],
+}
+`;
+
+exports[`babel-preset-amex moduleFormat overrides an existing modules setting when esm option is used 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-optional-chaining",
+    "babel-plugin-transform-react-remove-prop-types",
+  ],
+  "presets": Array [
+    Array [
+      Object {
+        "default": "@babel/preset-env",
+      },
+      Object {
+        "modules": false,
+        "targets": Object {
+          "browsers": Array [
+            "last 2 versions",
+            "not dead",
+          ],
+          "node": "current",
+        },
+      },
+    ],
+    Array [
+      Object {
+        "default": "@babel/preset-react",
+      },
+      Object {},
+    ],
+  ],
+}
+`;
+
 exports[`babel-preset-amex returns modern preset for env and option 1`] = `
 Object {
   "plugins": Array [

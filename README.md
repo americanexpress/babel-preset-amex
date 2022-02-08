@@ -37,7 +37,7 @@ npm install --save-dev babel-preset-amex
 
 #### Options
 
-By default `babel-preset-amex` will transpile for the "last 2 versions" and "not dead" browsers.
+By default `babel-preset-amex` will transpile for the "last 2 versions", "not dead" browsers, and CommonJS module syntax.
 
 ```json
 {
@@ -46,6 +46,7 @@ By default `babel-preset-amex` will transpile for the "last 2 versions" and "not
     {
       "serverOnly": true,
       "modern": true,
+      "moduleFormat": "esm"
     }
   ]]
 }
@@ -53,6 +54,7 @@ By default `babel-preset-amex` will transpile for the "last 2 versions" and "not
 
 `serverOnly` - Will transpile only for node.
 `modern` - Will transpile for [common browsers](./browserlist.js) n-1.
+`moduleFormat` - Will transpile to ECMAScript module syntax. Any string other than `"esm"` will transpile to CommonJS module syntax.
 
 #### Customizing Babel Config
 

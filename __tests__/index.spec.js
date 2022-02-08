@@ -74,4 +74,26 @@ describe('babel-preset-amex', () => {
     expect(preset().plugins).toEqual(expect.any(Array));
     expect(preset().plugins.length).toEqual(4);
   });
+
+  describe('moduleFormat', () => {
+    it('allows an esm option', () => {
+      process.env.NODE_ENV = 'production';
+      expect(preset({}, { moduleFormat: 'esm' })).toMatchSnapshot();
+    });
+
+    it('overrides an existing modules setting when esm option is used', () => {
+      process.env.NODE_ENV = 'production';
+      expect(preset({}, { 'preset-env': { modules: true }, moduleFormat: 'esm' })).toMatchSnapshot();
+    });
+
+    it('allows other options to be passed to preset-env while allowing esm option', () => {
+      process.env.NODE_ENV = 'production';
+      expect(preset({}, { 'preset-env': { exclude: ['@babel/plugin-transform-regenerator'] }, moduleFormat: 'esm' })).toMatchSnapshot();
+    });
+
+    it('does nothing when an unknown option is provided', () => {
+      process.env.NODE_ENV = 'production';
+      expect(preset({}, { moduleFormat: 'cjs' })).toMatchSnapshot();
+    });
+  });
 });
