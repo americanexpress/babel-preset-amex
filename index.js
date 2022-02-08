@@ -47,10 +47,8 @@ module.exports = (api = {}, opts = {}) => {
   const presetEnvOptions = Object.assign(
     {},
     { targets },
-    Object.assign({},
-      opts['preset-env'],
-      opts.moduleFormat === 'esm' && { modules: false }
-    )
+    opts['preset-env'],
+    opts.moduleFormat === 'esm' && { modules: false }
   );
 
   const reactPresetOptions = Object.assign({}, opts['react-preset']);
