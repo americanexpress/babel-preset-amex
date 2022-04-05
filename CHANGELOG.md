@@ -1,3 +1,10 @@
+## [3.6.1](https://github.com/americanexpress/babel-preset-amex/compare/v3.6.0...v3.6.1) (2022-04-05)
+
+
+### Bug Fixes
+
+* **labeler:** fix globing ([b43d07d](https://github.com/americanexpress/babel-preset-amex/commit/b43d07dab80c2a4bd1095137b108a70da4418628))
+
 # [3.6.0](https://github.com/americanexpress/babel-preset-amex/compare/v3.5.1...v3.6.0) (2022-02-08)
 
 
