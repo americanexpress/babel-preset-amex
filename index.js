@@ -44,14 +44,14 @@ module.exports = (api = {}, opts = {}) => {
     targets.browsers = isModern ? browserList : legacyBrowserList;
   }
 
-  const presetEnvOptions = Object.assign(
-    {},
-    { targets },
-    opts['preset-env'],
-    opts.moduleFormat === 'esm' && { modules: false }
-  );
+  const presetEnvOptions = {
 
-  const reactPresetOptions = Object.assign({}, opts['react-preset']);
+    targets,
+    ...opts['preset-env'],
+    ...opts.moduleFormat === 'esm' && { modules: false },
+  };
+
+  const reactPresetOptions = { ...opts['react-preset'] };
 
   return {
     presets: [
