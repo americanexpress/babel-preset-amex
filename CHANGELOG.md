@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/americanexpress/babel-preset-amex/compare/v3.6.1...v4.0.0) (2022-05-26)
+
+
+### chore
+
+* **eslint-config-amex:** update 15.x ([#45](https://github.com/americanexpress/babel-preset-amex/issues/45)) ([f2d501c](https://github.com/americanexpress/babel-preset-amex/commit/f2d501c3d7ee351c2fb31b670b45138146c48606))
+
+
+### BREAKING CHANGES
+
+* **eslint-config-amex:** drops support for node 10, 12, and 14
+
 ## [3.6.1](https://github.com/americanexpress/babel-preset-amex/compare/v3.6.0...v3.6.1) (2022-04-05)
 
 
