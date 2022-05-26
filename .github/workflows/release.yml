@@ -22,7 +22,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: '16'
       - run: NODE_ENV=development npm ci
       - run: npm run test
       - name: Semantic release
