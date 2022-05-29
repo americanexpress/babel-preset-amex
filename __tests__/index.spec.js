@@ -27,22 +27,29 @@ beforeEach(() => {
   jest.clearAllMocks();
   process.env.NODE_ENV = NODE_ENV;
 });
+
 describe('babel-preset-amex', () => {
   it('exports a function', () => {
     expect(preset).toEqual(expect.any(Function));
-    expect(preset()).toEqual(expect.any(Object));
+    expect(preset({})).toEqual(expect.any(Object));
   });
 
   it('includes an array of presets', () => {
-    expect(preset().presets).toEqual(expect.any(Array));
-    expect(preset().presets.length).toBe(2);
-    preset().presets.forEach((p) => expect(p).toEqual(expect.any(Object)));
+    const { presets } = preset({});
+    expect(presets).toEqual(expect.any(Array));
+    expect(presets.length).toBeGreaterThan(0);
+    presets.forEach((p) => expect(p).toEqual(expect.any(Object)));
   });
 
-  it('includes an array of plugins in production', () => {
+  it('includes an array of plugins', () => {
+    const { plugins } = preset({});
+    expect(plugins).toEqual(expect.any(Array));
+    expect(plugins.length).toBeGreaterThan(0);
+  });
+
+  it('includes the babel-plugin-transform-react-remove-prop-types plugin in production', () => {
     process.env.NODE_ENV = 'production';
-    expect(preset().plugins).toEqual(expect.any(Array));
-    expect(preset().plugins.length).toBe(5);
+    expect(preset({}).plugins).toContain(require('babel-plugin-transform-react-remove-prop-types').default);
   });
 
   it('returns modern preset for env and option', () => {
@@ -66,13 +73,6 @@ describe('babel-preset-amex', () => {
   it('allows options to be passed to plugins', () => {
     process.env.NODE_ENV = 'production';
     expect(preset({}, { 'preset-env': { exclude: ['@babel/plugin-transform-regenerator'] } })).toMatchSnapshot();
-  });
-
-  it('in development mode, includes an array of plugins', () => {
-    process.env.NODE_ENV = 'development';
-
-    expect(preset().plugins).toEqual(expect.any(Array));
-    expect(preset().plugins.length).toEqual(4);
   });
 
   describe('moduleFormat', () => {

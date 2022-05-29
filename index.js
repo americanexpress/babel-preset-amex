@@ -12,6 +12,7 @@
  * the License.
  */
 
+const { declare } = require('@babel/helper-plugin-utils');
 const envPreset = require('@babel/preset-env');
 const reactPreset = require('@babel/preset-react');
 const syntaxDynamicImport = require('@babel/plugin-syntax-dynamic-import').default;
@@ -19,12 +20,17 @@ const proposalClassProperties = require('@babel/plugin-proposal-class-properties
 const exportDefaultFrom = require('@babel/plugin-proposal-export-default-from').default;
 const proposalOptionalChaining = require('@babel/plugin-proposal-optional-chaining').default;
 const removePropTypes = require('babel-plugin-transform-react-remove-prop-types').default;
-
 const { browserList, legacyBrowserList } = require('./browserlist');
 
-module.exports = (api = {}, opts = {}) => {
-  const serverOnly = opts.serverOnly || (api.env && api.env('server'));
-  const isModern = opts.modern || (api.env && api.env('modern'));
+/**
+ * babel-preset-amex is the standard Babel preset for American Express.
+ *
+ * @param api The Babel plugin API.
+ * @param options The preset options.
+ */
+module.exports = declare(/** @type BabelConfigFunction */ (api, options) => {
+  const serverOnly = options.serverOnly || (api.env && api.env('server'));
+  const isModern = options.modern || (api.env && api.env('modern'));
   const isProduction = process.env.NODE_ENV === 'production';
   const plugins = [
     syntaxDynamicImport,
@@ -47,11 +53,11 @@ module.exports = (api = {}, opts = {}) => {
   const presetEnvOptions = {
 
     targets,
-    ...opts['preset-env'],
-    ...opts.moduleFormat === 'esm' && { modules: false },
+    ...options['preset-env'],
+    ...options.moduleFormat === 'esm' && { modules: false },
   };
 
-  const reactPresetOptions = { ...opts['react-preset'] };
+  const reactPresetOptions = { ...options['react-preset'] };
 
   return {
     presets: [
@@ -66,4 +72,6 @@ module.exports = (api = {}, opts = {}) => {
     ],
     plugins,
   };
-};
+});
+
+/** @typedef {import('@babel/core').ConfigFunction} BabelConfigFunction */
