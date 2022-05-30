@@ -23,8 +23,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16'
-      - run: NODE_ENV=development npm ci
-      - run: npm run test
+      - run: npm ci
+      - run: npm test
       - name: Semantic release
         env:
           GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
