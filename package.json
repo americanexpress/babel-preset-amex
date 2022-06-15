@@ -23,7 +23,11 @@
   },
   "keywords": [
     "babel",
-    "preset"
+    "preset",
+    "build",
+    "babel-preset",
+    "transpile",
+    "one-app"
   ],
   "author": "Jimmy King <jimmy.king@aexp.com> (https://github.com/10xLaCroixDrinker)",
   "license": "Apache-2.0",
