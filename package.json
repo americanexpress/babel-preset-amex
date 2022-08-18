@@ -29,7 +29,7 @@
     "transpile",
     "one-app"
   ],
-  "author": "Jimmy King <jimmy.king@aexp.com> (https://github.com/10xLaCroixDrinker)",
+  "author": "Jamie King <jamie.king@aexp.com> (https://github.com/10xLaCroixDrinker)",
   "license": "Apache-2.0",
   "dependencies": {
     "@babel/core": "^7.12.3",
