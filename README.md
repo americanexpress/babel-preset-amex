@@ -16,8 +16,8 @@ Want to get paid for your contributions to `babel-preset-amex`?
 
 * [Usage](#-usage)
 * [Contributing](#-contributing)
-* [License](#-license)
-* [Code of Conduct](#-code-of-conduct)
+* [License](#%EF%B8%8F-license)
+* [Code of Conduct](#%EF%B8%8F-code-of-conduct)
 
 ## 🤹‍ Usage
 
@@ -72,7 +72,7 @@ Plugins
 - [babel-plugin-transform-react-remove-prop-types](https://www.npmjs.com/package/babel-plugin-transform-react-remove-prop-types)
 
 If you wish to re-configure any of those presets do not redefine them
-within you `.babelrc`. Instead you can configure them through the
+within your `.babelrc`. Instead you can configure them through the
 `amex` preset.
 
 ```json
@@ -86,7 +86,7 @@ within you `.babelrc`. Instead you can configure them through the
       }
     ]
   ]
-};
+}
 ```
 
 
