@@ -36,7 +36,7 @@ This project adheres to the American Express [Code of Conduct](./CODE_OF_CONDUCT
 
 4. You can now run any of these scripts from the root folder.
 
-#### Running tests
+#### Running test scripts
 
 - **`npm run lint`**
 
