@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/americanexpress/babel-preset-amex/compare/v4.0.0...v4.0.1) (2022-08-31)
+
+
+### Bug Fixes
+
+* **readme:** fixed readme table of contents links ([b488c36](https://github.com/americanexpress/babel-preset-amex/commit/b488c36d1b0b9fc9c26f223ab02838b72f019f56))
+
 # [4.0.0](https://github.com/americanexpress/babel-preset-amex/compare/v3.6.1...v4.0.0) (2022-05-26)
 
 
