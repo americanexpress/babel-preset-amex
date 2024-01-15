@@ -21,6 +21,6 @@ const browserList = [
   'Safari',
 ].map((browser) => `last 2 ${browser} versions`);
 
-const legacyBrowserList = ['last 2 versions', 'not dead'];
+const legacyBrowserList = ['last 2 versions', 'not dead', 'IE 11'];
 
 module.exports = { browserList, legacyBrowserList };
