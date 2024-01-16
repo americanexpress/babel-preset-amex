@@ -17,7 +17,7 @@ const reactPreset = require('@babel/preset-react');
 const syntaxDynamicImport = require('@babel/plugin-syntax-dynamic-import').default;
 const proposalClassProperties = require('@babel/plugin-proposal-class-properties').default;
 const exportDefaultFrom = require('@babel/plugin-proposal-export-default-from').default;
-const proposalOptionalChaining = require('@babel/plugin-proposal-optional-chaining').default;
+const transformOptionalChaining = require('@babel/plugin-transform-optional-chaining').default;
 const removePropTypes = require('babel-plugin-transform-react-remove-prop-types').default;
 
 const { browserList, legacyBrowserList } = require('./browserlist');
@@ -30,7 +30,7 @@ module.exports = (api = {}, opts = {}) => {
     syntaxDynamicImport,
     proposalClassProperties,
     exportDefaultFrom,
-    proposalOptionalChaining,
+    transformOptionalChaining,
   ];
   if (isProduction) {
     plugins.push(removePropTypes);

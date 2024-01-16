@@ -6,7 +6,7 @@ Object {
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-optional-chaining",
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [
@@ -44,7 +44,7 @@ Object {
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-optional-chaining",
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [
@@ -80,7 +80,7 @@ Object {
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-optional-chaining",
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [
@@ -119,7 +119,7 @@ Object {
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-optional-chaining",
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [
@@ -154,7 +154,7 @@ Object {
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-optional-chaining",
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [
@@ -190,7 +190,7 @@ Object {
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-optional-chaining",
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [
@@ -228,7 +228,7 @@ Object {
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-optional-chaining",
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [
@@ -266,7 +266,7 @@ Object {
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-optional-chaining",
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [
@@ -296,7 +296,7 @@ Object {
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-optional-chaining",
     "babel-plugin-transform-react-remove-prop-types",
   ],
   "presets": Array [
