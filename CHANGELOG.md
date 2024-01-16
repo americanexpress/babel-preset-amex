@@ -1,3 +1,10 @@
+## [4.0.2](https://github.com/americanexpress/babel-preset-amex/compare/v4.0.1...v4.0.2) (2024-01-16)
+
+
+### Bug Fixes
+
+* **legacy-browserlist:** include IE 11 ([#59](https://github.com/americanexpress/babel-preset-amex/issues/59)) ([2380be0](https://github.com/americanexpress/babel-preset-amex/commit/2380be0f6fe58f7f2cf534fe104e85b914af4219))
+
 ## [4.0.1](https://github.com/americanexpress/babel-preset-amex/compare/v4.0.0...v4.0.1) (2022-08-31)
 
 
