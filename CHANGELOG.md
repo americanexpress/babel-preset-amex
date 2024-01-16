@@ -1,3 +1,10 @@
+## [4.0.3](https://github.com/americanexpress/babel-preset-amex/compare/v4.0.2...v4.0.3) (2024-01-16)
+
+
+### Bug Fixes
+
+* remove deprecated proposal plugin in favor of standardized plugin ([#61](https://github.com/americanexpress/babel-preset-amex/issues/61)) ([d1b476b](https://github.com/americanexpress/babel-preset-amex/commit/d1b476b08dc08b332be9d6054568a039f1fd79f7))
+
 ## [4.0.2](https://github.com/americanexpress/babel-preset-amex/compare/v4.0.1...v4.0.2) (2024-01-16)
 
 
