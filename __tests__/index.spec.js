@@ -19,7 +19,7 @@ jest.mock('@babel/preset-react', () => ({ default: '@babel/preset-react' }));
 jest.mock('@babel/plugin-syntax-dynamic-import', () => ({ default: '@babel/plugin-syntax-dynamic-import' }));
 jest.mock('@babel/plugin-proposal-class-properties', () => ({ default: '@babel/plugin-proposal-class-properties' }));
 jest.mock('@babel/plugin-proposal-export-default-from', () => ({ default: '@babel/plugin-proposal-export-default-from' }));
-jest.mock('@babel/plugin-proposal-optional-chaining', () => ({ default: '@babel/plugin-proposal-optional-chaining' }));
+jest.mock('@babel/plugin-transform-optional-chaining', () => ({ default: '@babel/plugin-transform-optional-chaining' }));
 jest.mock('babel-plugin-transform-react-remove-prop-types', () => ({ default: 'babel-plugin-transform-react-remove-prop-types' }));
 
 const { NODE_ENV } = process.env;
